@@ -1,5 +1,4 @@
 ﻿using Game.Sources.Data.Dynamic;
-using Game.Sources.Data.Extensions;
 using Game.Sources.Services.PersistentProgress;
 using UnityEngine;
 
@@ -18,7 +17,8 @@ namespace Game.Sources.Services.SaveLoadService
 
         public void SaveProgress()
         {
-            PlayerPrefs.SetString(SaveLoadKey, _persistentProgressService.PlayerProgress.ToJson());
+            string json = JsonUtility.ToJson(_persistentProgressService.PlayerProgress);
+            PlayerPrefs.SetString(SaveLoadKey, json);
         }
 
         public PlayerProgress LoadProgress()
@@ -28,8 +28,10 @@ namespace Game.Sources.Services.SaveLoadService
                 return null;
             }
             
-            var prefs = PlayerPrefs.GetString(SaveLoadKey)?.FromJson<PlayerProgress>();
-            return prefs; 
+            string json = PlayerPrefs.GetString(SaveLoadKey);
+            PlayerProgress playerProgress = JsonUtility.FromJson<PlayerProgress>(json);
+            
+            return playerProgress; 
         }
     }
 }

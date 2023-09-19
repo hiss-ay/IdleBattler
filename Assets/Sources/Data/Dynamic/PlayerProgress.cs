@@ -5,13 +5,13 @@ namespace Game.Sources.Data.Dynamic
     [Serializable]
     public class PlayerProgress
     {
-        public PlayerProgress(LevelData levelData, CoinData coinData)
+        public PlayerProgress()
         {
-            LevelData = levelData;
-            CoinData = coinData;
+            levelData = new LevelData();
+            coinData = new CoinData();
         }
-
-        public LevelData LevelData { get; }
-        public CoinData CoinData { get; }
+        
+        public LevelData levelData;
+        public CoinData coinData;
     }
 }

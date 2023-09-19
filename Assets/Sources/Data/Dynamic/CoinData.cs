@@ -5,14 +5,14 @@ namespace Game.Sources.Data.Dynamic
     [Serializable]
     public class CoinData
     {
-        public int Coin { get; private set; }
+        public int coin;
 
-        public event Action OnAmountChanged;
+        public event Action<int> OnAmountChanged;
         
         public void Collect(int amount)
         {
-            Coin += amount;
-            OnAmountChanged?.Invoke();
+            coin += amount;
+            OnAmountChanged?.Invoke(coin);
         }
     }
 }

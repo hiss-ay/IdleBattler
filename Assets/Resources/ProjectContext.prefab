@@ -76,6 +76,7 @@ Transform:
   m_Children:
   - {fileID: 8541978229692894053}
   - {fileID: 7049384278947710961}
+  - {fileID: 7855344622978824010}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3589170286117885464
@@ -94,6 +95,7 @@ MonoBehaviour:
   _monoInstallers:
   - {fileID: 6027480651742375442}
   - {fileID: 1415865690444936278}
+  - {fileID: 299385473161051478}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 0
   _editorReflectionBakingCoverageMode: 0
@@ -152,3 +154,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81dba57f7ae1478b8dc17f7f51965c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &9171992863102286010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7855344622978824010}
+  - component: {fileID: 299385473161051478}
+  m_Layer: 0
+  m_Name: SettingsInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7855344622978824010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171992863102286010}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6218698711525080819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &299385473161051478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171992863102286010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e20f7f5c164313bffc49e78548911d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInitializationSettings: {fileID: 11400000, guid: 4f32e27b1ad4f2a489863da066284ecb, type: 2}

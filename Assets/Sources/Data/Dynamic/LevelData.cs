@@ -5,14 +5,13 @@ namespace Game.Sources.Data.Dynamic
     [Serializable]
     public class LevelData
     {
-        public int Level { get; private set; }
-        
-        public event Action OnLevelChanged;
+        public int level;
+        public event Action<int> OnLevelChanged;
         
         public void NextLevel()
         {
-            Level++;
-            OnLevelChanged?.Invoke();
+            level++;
+            OnLevelChanged?.Invoke(level);
         }
     }
 }

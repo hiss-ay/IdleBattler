@@ -18,7 +18,5 @@ namespace Game.Sources.Infrastructure.StackStateMachine.InitializeSteps
             _assetsAddressableService.LoadSceneAsync(AssetsAddressableConstants.MAIN_MENU_LEVEL_NAME);
             stateMachine.StateCompleted(this);
         }
-
-        
     }
 }
