@@ -1,6 +1,6 @@
 ﻿using Game.Sources.Data.Settings;
 using Game.Sources.Infrastructure.StackStateMachine.Base;
-using Game.Sources.Services.PersistentProgress;
+using Game.Sources.Services.PersistentProgressService;
 using Game.Sources.Services.SaveLoadService;
 
 namespace Game.Sources.Infrastructure.StackStateMachine.InitializeSteps

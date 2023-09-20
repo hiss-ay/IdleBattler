@@ -1,4 +1,4 @@
-﻿using Game.Sources.Services.PersistentProgress;
+﻿using Game.Sources.Services.PersistentProgressService;
 using UnityEngine;
 using UnityEngine.UI;
 

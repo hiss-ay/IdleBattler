@@ -1,4 +1,5 @@
-﻿using Game.Sources.Data.Dynamic;
+﻿using System.Collections.Generic;
+using Game.Sources.Data.Dynamic;
 using UnityEngine;
 
 namespace Game.Sources.Data.Settings
@@ -9,6 +10,7 @@ namespace Game.Sources.Data.Settings
     {
         [SerializeField] private int level;
         [SerializeField] private int coins;
+        [SerializeField] private List<MonsterData> monstersData;
 
         public PlayerProgress CreateNewPlayerProgress()
         {
@@ -22,7 +24,9 @@ namespace Game.Sources.Data.Settings
                 coinData =
                 {
                     coin = coins
-                }
+                },
+                
+                MonstersData = monstersData
             };
 
             return playerProgress;

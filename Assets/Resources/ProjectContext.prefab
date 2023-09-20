@@ -93,9 +93,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
   _monoInstallers:
+  - {fileID: 299385473161051478}
   - {fileID: 6027480651742375442}
   - {fileID: 1415865690444936278}
-  - {fileID: 299385473161051478}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 0
   _editorReflectionBakingCoverageMode: 0
@@ -199,3 +199,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInitializationSettings: {fileID: 11400000, guid: 4f32e27b1ad4f2a489863da066284ecb, type: 2}
+  monstersCollection: {fileID: 11400000, guid: b02aa74cb91cc0e4a9623e959658f860, type: 2}

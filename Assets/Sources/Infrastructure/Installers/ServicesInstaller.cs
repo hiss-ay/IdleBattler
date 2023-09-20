@@ -1,7 +1,8 @@
 ﻿using Game.Sources.Infrastructure.Factories.AbstractFactory;
 using Game.Sources.Infrastructure.Factories.UIFactory;
 using Game.Sources.Services.AssetsAddressableService;
-using Game.Sources.Services.PersistentProgress;
+using Game.Sources.Services.MonstersCollectionService;
+using Game.Sources.Services.PersistentProgressService;
 using Game.Sources.Services.SaveLoadService;
 using Zenject;
 
@@ -16,6 +17,7 @@ namespace Game.Sources.Infrastructure.Installers
             BindUIFactory();
             BindPersistentProgressService();
             BindSaveLoadService();
+            BindMonstersCollectionService();
         }
         
         private void BindAssetAddressableService()
@@ -41,6 +43,11 @@ namespace Game.Sources.Infrastructure.Installers
         private void BindSaveLoadService()
         {
             Container.BindInterfacesTo<SaveLoadService>().AsSingle();
+        }
+
+        private void BindMonstersCollectionService()
+        {
+            Container.BindInterfacesTo<MonstersCollectionService>().AsSingle();
         }
     }
 }

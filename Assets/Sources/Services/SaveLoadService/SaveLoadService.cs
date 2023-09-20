@@ -1,5 +1,5 @@
 ﻿using Game.Sources.Data.Dynamic;
-using Game.Sources.Services.PersistentProgress;
+using Game.Sources.Services.PersistentProgressService;
 using UnityEngine;
 
 namespace Game.Sources.Services.SaveLoadService

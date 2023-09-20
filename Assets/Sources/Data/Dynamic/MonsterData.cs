@@ -2,16 +2,25 @@
 
 namespace Game.Sources.Data.Dynamic
 {
+    [Serializable]
     public class MonsterData
     {
-        public int ID { get; private set; } = -1;
-        public int Level { get; private set; }
-        
+        public MonsterData(int id, int level, int shards)
+        {
+            this.id = id;
+            this.level = level;
+            this.shards = shards;
+        }
+
+        public int id;
+        public int level;
+        public int shards;
+
         public event Action OnMonsterUpgraded;
         
         public void Upgrade()
         {
-            Level++;
+            level++;
             OnMonsterUpgraded?.Invoke();
         }
     }

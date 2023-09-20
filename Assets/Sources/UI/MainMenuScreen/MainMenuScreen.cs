@@ -1,4 +1,4 @@
-using Game.Sources.Services.PersistentProgress;
+using Game.Sources.Services.PersistentProgressService;
 using UnityEngine;
 
 namespace Game.Sources.UI.MainMenuScreen
@@ -14,20 +14,6 @@ namespace Game.Sources.UI.MainMenuScreen
         {
             coinsPanel.SetUp(persistentProgressService);
             levelSlider.SetUp(persistentProgressService);
-            // _persistentProgressService = persistentProgressService;
-
-            // UpdateCoinView(_persistentProgressService.PlayerProgress.coinData.coin);
-            // UpdateLevelView(_persistentProgressService.PlayerProgress.levelData.level);
-            //
-            // _persistentProgressService.PlayerProgress.coinData.OnAmountChanged += UpdateCoinView;
-            // _persistentProgressService.PlayerProgress.levelData.OnLevelChanged += UpdateLevelView;
-            
-        }
-
-        private void OnDisable()
-        {
-            // _persistentProgressService.PlayerProgress.coinData.OnAmountChanged -= UpdateCoinView;
-            // _persistentProgressService.PlayerProgress.levelData.OnLevelChanged -= UpdateLevelView;
         }
     }
 }

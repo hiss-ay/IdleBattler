@@ -1,10 +1,11 @@
 ﻿using Game.Sources.Data.Dynamic;
 
-namespace Game.Sources.Services.PersistentProgress
+namespace Game.Sources.Services.PersistentProgressService
 {
     public interface IPersistentProgressService
     {
         public PlayerProgress PlayerProgress { get; }
         public void SetProgress(PlayerProgress playerProgress);
+        public MonsterData GetMonsterDataByID(int id);
     }
 }
