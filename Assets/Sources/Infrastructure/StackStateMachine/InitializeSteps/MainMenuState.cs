@@ -2,6 +2,7 @@
 using Game.Sources.Infrastructure.StackStateMachine.Base;
 using Game.Sources.Services.PersistentProgress;
 using Game.Sources.UI;
+using Game.Sources.UI.MainMenuScreen;
 
 namespace Game.Sources.Infrastructure.StackStateMachine.InitializeSteps
 {
