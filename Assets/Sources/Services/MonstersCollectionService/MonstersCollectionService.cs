@@ -7,14 +7,14 @@ namespace Game.Sources.Services.MonstersCollectionService
 {
     public class MonstersCollectionService : IMonstersCollectionService
     {
-        public MonstersCollectionService(MonstersCollection monstersCollection,
+        public MonstersCollectionService(MonstersCollectionSettings monstersCollectionSettings,
             IPersistentProgressService persistentProgressService)
         {
-            _monstersCollection = monstersCollection;
+            _monstersCollectionSettings = monstersCollectionSettings;
             _persistentProgressService = persistentProgressService;
         }
         
-        private readonly MonstersCollection _monstersCollection;
+        private readonly MonstersCollectionSettings _monstersCollectionSettings;
         private readonly IPersistentProgressService _persistentProgressService;
         
         public List<MonsterCard> MonsterCards { get; private set; }
@@ -23,9 +23,9 @@ namespace Game.Sources.Services.MonstersCollectionService
         {
             MonsterCards = new List<MonsterCard>();
             
-            foreach (var monsterSettings in _monstersCollection.MonsterSettings)
+            foreach (var monsterSettings in _monstersCollectionSettings.MonsterSettings)
             {
-                var monsterData = _persistentProgressService.GetMonsterDataByID(monsterSettings.ID);
+                var monsterData = _persistentProgressService.GetOrCreateMonsterDataByID(monsterSettings.ID);
                 var card = new MonsterCard(monsterSettings, monsterData);
                 MonsterCards.Add(card);
             }

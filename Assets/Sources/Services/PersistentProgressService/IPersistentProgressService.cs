@@ -13,6 +13,6 @@ namespace Game.Sources.Services.PersistentProgressService
         public void SetProgress(PlayerProgressData playerProgressData);
         public void AddCoins(int amount);
         public void LevelUp();
-        public MonsterData GetMonsterDataByID(int id);
+        public MonsterData GetOrCreateMonsterDataByID(int id);
     }
 }

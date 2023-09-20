@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.Sources.Data.Settings.MonsterSettings
 {
     [Serializable]
-    public class Stats
+    public class MonsterStats
     {
         [SerializeField] private ProgressiveStat health;
         [SerializeField] private ProgressiveStat damage;

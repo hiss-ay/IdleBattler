@@ -13,7 +13,10 @@ namespace Game.Sources.Data.Settings.MonsterSettings
 
         public int GetValue(int level)
         {
-            int evolutionIndex = level % 10 + 1;
+            int evolutionIndex = 0;
+            if (level >= 0)
+                evolutionIndex = level / 10 + 1;
+                
             float evolutionModifier = evolutionIndex switch
             {
                 1 => firstEvolutionModifier,

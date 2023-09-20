@@ -8,7 +8,7 @@ namespace Game.Sources.Infrastructure.Installers
     public class SettingsInstaller : MonoInstaller
     {
         [SerializeField] private PlayerInitializationSettings playerInitializationSettings;
-        [SerializeField] private MonstersCollection monstersCollection;
+        [SerializeField] private MonstersCollectionSettings monstersCollectionSettings;
         
         public override void InstallBindings()
         {
@@ -23,7 +23,7 @@ namespace Game.Sources.Infrastructure.Installers
 
         private void BindMonstersDataBase()
         {
-            Container.Bind<MonstersCollection>().FromInstance(monstersCollection).AsSingle();
+            Container.Bind<MonstersCollectionSettings>().FromInstance(monstersCollectionSettings).AsSingle();
         }
     }
 }

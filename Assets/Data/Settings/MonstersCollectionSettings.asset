@@ -10,7 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ded78e5a6d7134e499780db0c6666435, type: 3}
-  m_Name: MonstersCollection
+  m_Name: MonstersCollectionSettings
   m_EditorClassIdentifier: 
   monsterSettings:
   - {fileID: 11400000, guid: 8ad786ee0952e31458a0e99d4b071f8e, type: 2}
+  - {fileID: 11400000, guid: db1a73f0166598e47a0a086611e12e45, type: 2}
+  - {fileID: 11400000, guid: 5f79199bb24b0b744952000343b3428f, type: 2}
+  - {fileID: 11400000, guid: f2ce843e2e5f97d4b916c0bc40202494, type: 2}
+  - {fileID: 11400000, guid: d630e387c8be28544ad9edca54f57a86, type: 2}

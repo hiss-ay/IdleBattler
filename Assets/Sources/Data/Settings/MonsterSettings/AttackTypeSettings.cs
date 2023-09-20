@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace Game.Sources.Data.Settings.MonsterSettings
 {
-    [CreateAssetMenu(fileName = "AttackSettings", menuName = "Settings/AttackSettings")]
-    public class AttackSettings : ScriptableObject
+    [CreateAssetMenu(fileName = "AttackTypeSettings", menuName = "Settings/AttackTypeSettings")]
+    public class AttackTypeSettings : ScriptableObject
     {
         [SerializeField] private Sprite icon;
         [SerializeField] private float attackRange;

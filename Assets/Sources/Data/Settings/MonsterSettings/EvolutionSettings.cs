@@ -7,14 +7,14 @@ namespace Game.Sources.Data.Settings.MonsterSettings
     public class EvolutionSettings
     {
         [SerializeField] private SpellSettings spellSettings;
-        [SerializeField] private MonsterSkin monsterSkin;
+        [SerializeField] private MonsterEvolutionSkin monsterEvolutionSkin;
         [SerializeField] private GameObject prefab;
 
         public Sprite SpellIcon => spellSettings.Icon;
         public string SpellDescription => spellSettings.Description;
         
-        public Sprite MonsterIcon => monsterSkin.Icon;
-        public string MonsterName => monsterSkin.Name;
+        public Sprite MonsterIcon => monsterEvolutionSkin.Icon;
+        public string MonsterName => monsterEvolutionSkin.Name;
 
         public GameObject Prefab => prefab;
     }

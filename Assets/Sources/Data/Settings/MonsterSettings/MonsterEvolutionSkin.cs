@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.Sources.Data.Settings.MonsterSettings
 {
     [Serializable]
-    public class MonsterSkin
+    public class MonsterEvolutionSkin
     {
         [SerializeField] private string name;
         [SerializeField] private Sprite icon;
