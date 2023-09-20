@@ -6,10 +6,10 @@ namespace Game.Sources.Infrastructure.Installers
     {
         public override void InstallBindings()
         {
-            BindGameInstance();
+            BindBootstrap();
         }
 
-        private void BindGameInstance()
+        private void BindBootstrap()
         {
             Container.Bind<Bootstrap>().AsSingle().NonLazy();
         }

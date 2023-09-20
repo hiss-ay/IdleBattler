@@ -21,10 +21,11 @@ namespace Game.Sources.Infrastructure
             ISaveLoadService saveLoadService)
         {
             StackStateMachine.Base.StackStateMachine.CreateAndRun(
-                new SceneLoadState(assetsAddressableService),
                 new ProgressLoadingState(persistentProgressService, saveLoadService, playerInitializationSettings),
                 new ActionState(monstersCollectionService.Initialize),
-                new MainMenuState(uiFactory, persistentProgressService, monstersCollectionService)
+                new SceneLoadState(assetsAddressableService),
+                new MainMenuState(uiFactory, persistentProgressService),
+                new ActionState(saveLoadService.SaveProgress)
             );
         }
     }

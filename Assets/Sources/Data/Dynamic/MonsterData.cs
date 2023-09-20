@@ -15,13 +15,5 @@ namespace Game.Sources.Data.Dynamic
         public int id;
         public int level;
         public int shards;
-
-        public event Action OnMonsterUpgraded;
-        
-        public void Upgrade()
-        {
-            level++;
-            OnMonsterUpgraded?.Invoke();
-        }
     }
 }

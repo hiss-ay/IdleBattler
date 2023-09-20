@@ -13,25 +13,25 @@ namespace Game.Sources.Services.SaveLoadService
 
         private readonly IPersistentProgressService _persistentProgressService;
         
-        private const string SaveLoadKey = "SaveLoadKey";
+        private const string PlayerKey = "PlayerKey";
 
         public void SaveProgress()
         {
-            string json = JsonUtility.ToJson(_persistentProgressService.PlayerProgress);
-            PlayerPrefs.SetString(SaveLoadKey, json);
+            string json = JsonUtility.ToJson(_persistentProgressService.PlayerProgressData);
+            PlayerPrefs.SetString(PlayerKey, json);
         }
 
-        public PlayerProgress LoadProgress()
+        public PlayerProgressData LoadProgress()
         {
-            if (!PlayerPrefs.HasKey(SaveLoadKey))
+            if (!PlayerPrefs.HasKey(PlayerKey))
             {
                 return null;
             }
             
-            string json = PlayerPrefs.GetString(SaveLoadKey);
-            PlayerProgress playerProgress = JsonUtility.FromJson<PlayerProgress>(json);
+            string json = PlayerPrefs.GetString(PlayerKey);
+            PlayerProgressData playerProgressData = JsonUtility.FromJson<PlayerProgressData>(json);
             
-            return playerProgress; 
+            return playerProgressData; 
         }
     }
 }

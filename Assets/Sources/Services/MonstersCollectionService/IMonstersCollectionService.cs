@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Game.Sources.Data.Dynamic;
+using Game.Sources.Data.MonsterCard;
 
 namespace Game.Sources.Services.MonstersCollectionService
 {
     public interface IMonstersCollectionService
     {
-        public List<MonsterCard> MonsterCards { get; }
         public void Initialize();
+        public List<MonsterCard> MonsterCards { get; }
     }
 }

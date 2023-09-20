@@ -12,24 +12,9 @@ namespace Game.Sources.Data.Settings
         [SerializeField] private int coins;
         [SerializeField] private List<MonsterData> monstersData;
 
-        public PlayerProgress CreateNewPlayerProgress()
+        public PlayerProgressData CreateNewPlayerProgress()
         {
-            var playerProgress = new PlayerProgress
-            {
-                levelData =
-                {
-                    level = level
-                },
-                
-                coinData =
-                {
-                    coin = coins
-                },
-                
-                MonstersData = monstersData
-            };
-
-            return playerProgress;
+            return new PlayerProgressData(level, coins, monstersData);
         }
     }
 }

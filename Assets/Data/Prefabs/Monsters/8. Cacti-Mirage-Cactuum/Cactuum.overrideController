@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Cactuum
+  m_Controller: {fileID: 9100000, guid: 920ee61ceaede6f4faa88bd5b3895d8c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: e6ccfd1e1bd66c24387f86e8d8e1954c, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 1b55d21db57c8fb48951d2ae09ad0e90, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: f6995c1fd566a8e459f194952ef22c7c, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: a988dd01264ad9f42b91c3bf04a6307f, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: f99ae6e309d25b84bb40acc4ee37ed3e, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 7812e01b6e490e446a95451e353c3f0a, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 12664762cb1f8984ba5e97b250a9bffe, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: c51d645f7ceb7ec4bad3a57a5675530e, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 472f9cfc78fe76f4c979e8b393680a9e, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: b2c2db046bf15434f817dbfdbddc7b4f, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 3310d3b893c06694ba3a4d5b9416ded7, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: a6403a7f55a370e41bc32cbe7d9ceec4, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 4bfcf7479bc002d4f9bcf72582998f01, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 1861fb8acb2d8e84d9feb95408f28fff, type: 3}

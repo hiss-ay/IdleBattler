@@ -14,8 +14,8 @@ namespace Game.Sources.UI.MainMenuScreen
         public void SetUp(IPersistentProgressService persistentProgressService)
         {
             _persistentProgressService = persistentProgressService;
-            UpdateCoins(_persistentProgressService.PlayerProgress.coinData.coin);
-            _persistentProgressService.PlayerProgress.coinData.OnAmountChanged += UpdateCoins;
+            UpdateCoins(_persistentProgressService.Coins);
+            _persistentProgressService.OnCoinsAdded += UpdateCoins;
         }
 
         private void UpdateCoins(int amount)
@@ -25,7 +25,7 @@ namespace Game.Sources.UI.MainMenuScreen
 
         private void OnDisable()
         {
-            _persistentProgressService.PlayerProgress.coinData.OnAmountChanged -= UpdateCoins;
+            _persistentProgressService.OnCoinsAdded -= UpdateCoins;
         }
     }
 }
