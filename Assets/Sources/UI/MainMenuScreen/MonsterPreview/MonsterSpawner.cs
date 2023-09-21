@@ -16,9 +16,7 @@ namespace Game.Sources.UI.MainMenuScreen.MonsterPreview
             _monstersCollectionService = monstersCollectionService;
         }
         
-        [SerializeField] private int layerNumber;
         [SerializeField] private int timer;
-        [SerializeField] private Transform parent;
 
         private IAbstractFactory _abstractFactory;
         private IMonstersCollectionService _monstersCollectionService;
@@ -32,25 +30,13 @@ namespace Game.Sources.UI.MainMenuScreen.MonsterPreview
         {
             while (true)
             {
-                var monsterCard = _monstersCollectionService.MonsterCards.FirstOrDefault(x => x.IsUnlocked);
-                if (monsterCard == null)
-                    break;
-                
+                var monsterCard = _monstersCollectionService.MonsterCards.First(x => x.IsUnlocked);
                 var monsterInstance = _abstractFactory.CreateInstance(monsterCard.Prefab, Vector3.zero);
-                monsterInstance.transform.SetParent(parent);
-                SetLayer(monsterInstance.transform);
                 
                 yield return new WaitForSeconds(timer);
                 
                 _abstractFactory.DestroyInstance(monsterInstance);
             }
-        }
-        
-        private void SetLayer(Transform monsterTransform)
-        {
-            monsterTransform.gameObject.layer = layerNumber;
-            foreach (Transform child in monsterTransform)
-                child.gameObject.layer = layerNumber;
         }
     }
 }

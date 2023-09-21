@@ -16,5 +16,5 @@ MonoBehaviour:
   coins: 100
   monstersData:
   - id: 0
-    level: 10
+    level: 1
     shards: 5

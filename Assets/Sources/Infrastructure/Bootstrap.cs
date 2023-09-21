@@ -25,8 +25,8 @@ namespace Game.Sources.Infrastructure
             StackStateMachine.Base.StackStateMachine.CreateAndRun(
                 new ProgressLoadingState(persistentProgressService, saveLoadService, playerInitializationSettings),
                 new ActionState(monstersCollectionService.Initialize),
-                new SceneLoadingState(AssetsAddressableConstants.MAIN_MENU_LEVEL_NAME, assetsAddressableService),
-                new SceneLoadingState(AssetsAddressableConstants.MONSTER_PREVIEW_LEVEL_NAME, assetsAddressableService, LoadSceneMode.Additive),
+                new SceneLoadingAsyncState(AssetsAddressableConstants.MAIN_MENU_LEVEL_NAME, assetsAddressableService),
+                new SceneLoadingAsyncState(AssetsAddressableConstants.MONSTER_PREVIEW_LEVEL_NAME, assetsAddressableService, LoadSceneMode.Additive),
                 new MainMenuState(uiFactory, persistentProgressService),
                 new ActionState(saveLoadService.SaveProgress)
             );

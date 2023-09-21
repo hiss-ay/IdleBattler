@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 namespace Game.Sources.Infrastructure.StackStateMachine.InitializeSteps
 {
-    public class SceneLoadingState : InstantState
+    public class SceneLoadingAsyncState : InstantState
     {
-        public SceneLoadingState(string sceneName, IAssetsAddressableService assetsAddressableService, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+        public SceneLoadingAsyncState(string sceneName, IAssetsAddressableService assetsAddressableService, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
             _sceneName = sceneName;
             _loadSceneMode = loadSceneMode;
