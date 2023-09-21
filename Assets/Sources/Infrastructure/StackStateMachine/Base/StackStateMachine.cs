@@ -24,7 +24,9 @@ namespace Game.Sources.Infrastructure.StackStateMachine.Base
         
         public void ReplaceStates(params IState[] states)
         {
-            _stackStates.Pop();
+            var lastState = _stackStates.Pop();
+            if (_isStarted)
+                lastState.Exit();
             PushStates(states);
         }
 
@@ -35,7 +37,10 @@ namespace Game.Sources.Infrastructure.StackStateMachine.Base
                 return;
             }
 
-            _stackStates.Pop();
+            var lastState = _stackStates.Pop();
+            if (_isStarted)
+                lastState.Exit();
+            
             if (_stackStates.Count == 0)
             {
                 Complete();

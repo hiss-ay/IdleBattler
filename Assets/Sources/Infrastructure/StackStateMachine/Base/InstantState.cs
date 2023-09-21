@@ -3,6 +3,6 @@
     public abstract class InstantState : IState
     {
         public abstract void Enter(IStackStateMachine stateMachine);
-        //public abstract void Exit();
+        public virtual void Exit() { }
     }
 }

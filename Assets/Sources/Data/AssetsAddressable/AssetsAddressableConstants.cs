@@ -7,8 +7,9 @@
         public const string MONSTER_PREVIEW_LEVEL_NAME = "MonsterPreview";
     
         public const string MAIN_MENU_SCREEN = "MainMenuScreen";
-        public const string CARD_COLLECTION_SCREEN = "CardCollectionScreen";
+        public const string CARD_COLLECTION_SCREEN = "CollectionScreen";
         public const string TEAM_BUILDER_SCREEN = "TeamBuilderScreen";
+        public const string QUESTS_SCREEN = "QuestsScreen";
         public const string BATTLER_SCREEN = "BattlerScreen";
     }
 }

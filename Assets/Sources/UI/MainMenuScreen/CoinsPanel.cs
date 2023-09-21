@@ -1,17 +1,18 @@
 ﻿using Game.Sources.Services.PersistentProgressService;
+using Game.Sources.UI.Base;
 using Game.Sources.UI.Extensions;
 using TMPro;
 using UnityEngine;
 
 namespace Game.Sources.UI.MainMenuScreen
 {
-    public class CoinsPanel : MonoBehaviour
+    public class CoinsPanel : UIElement<IPersistentProgressService>
     {
         [SerializeField] private TMP_Text coins;
         
         private IPersistentProgressService _persistentProgressService;
 
-        public void SetUp(IPersistentProgressService persistentProgressService)
+        protected override void OnShow(IPersistentProgressService persistentProgressService)
         {
             _persistentProgressService = persistentProgressService;
             UpdateCoins(_persistentProgressService.Coins);
@@ -23,7 +24,7 @@ namespace Game.Sources.UI.MainMenuScreen
             coins.text = amount.IntegerToString();
         }
 
-        private void OnDisable()
+        protected override void OnHide()
         {
             _persistentProgressService.OnCoinsAdded -= UpdateCoins;
         }

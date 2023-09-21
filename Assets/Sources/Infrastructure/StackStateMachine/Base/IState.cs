@@ -3,6 +3,6 @@
     public interface IState
     {
         public void Enter(IStackStateMachine stateMachine);
-        //public void Exit();
+        public void Exit();
     }
 }

@@ -1,6 +1,9 @@
-﻿using System.Threading.Tasks;
-using Game.Sources.Data.AssetsAddressable;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Game.Sources.Services.AssetsAddressableService;
+using Game.Sources.UI.Base;
+using Game.Sources.UI.Extensions;
 using UnityEngine;
 using Zenject;
 
@@ -16,61 +19,41 @@ namespace Game.Sources.Infrastructure.Factories.UIFactory
 
         private readonly IAssetsAddressableService _assetsAddressableService;
         private readonly DiContainer _container;
-        
-        public GameObject MainMenuScreen { get; private set; }
-        public GameObject CardCollectionScreen { get; private set; }
-        public GameObject TeamBuilderScreen { get; private set; }
-        public GameObject BattlerScreen { get; private set; }
-        
-        public async Task<GameObject> CreateMainMenuScreen()
+
+        private readonly List<UIElement> _activeElements = new();
+
+        public async Task<UIElement> ShowScreen<T>(UIElementType type, T context)
         {
-            MainMenuScreen = await CreateScreenAsync(AssetsAddressableConstants.MAIN_MENU_SCREEN);
-            return MainMenuScreen;
+            var screen = _activeElements.FirstOrDefault(x => x.UIElementType == type);
+            
+            if (screen == null)
+            {
+                screen = await CreateScreenAsync(type.ToAddressableConstant());
+                _activeElements.Add(screen);
+            }
+            
+            screen.Show(context);
+
+            return screen;
         }
 
-        public void DestroyMainMenuScreen()
+        public void DestroyScreen(UIElementType type)
         {
-            Object.Destroy(MainMenuScreen);
+            var screen = _activeElements.FirstOrDefault(x => x.UIElementType == type);
+            if (screen != null)
+            {
+                _activeElements.Remove(screen);
+                Object.Destroy(screen);
+            }
         }
 
-        public async Task<GameObject> CreateCardCollectionScreen()
-        {
-            CardCollectionScreen = await CreateScreenAsync(AssetsAddressableConstants.CARD_COLLECTION_SCREEN);
-            return CardCollectionScreen;
-        }
-
-        public void DestroyCardCollectionScreen()
-        {
-            Object.Destroy(CardCollectionScreen);
-        }
-
-        public async Task<GameObject> CreateTeamBuilderScreen()
-        {
-            TeamBuilderScreen = await CreateScreenAsync(AssetsAddressableConstants.TEAM_BUILDER_SCREEN);
-            return TeamBuilderScreen;
-        }
-
-        public void DestroyTeamBuilderScreen()
-        {
-            Object.Destroy(TeamBuilderScreen);
-        }
-
-        public async Task<GameObject> CreateBattlerScreen()
-        {
-            BattlerScreen = await CreateScreenAsync(AssetsAddressableConstants.BATTLER_SCREEN);
-            return BattlerScreen;
-        }
-
-        public void DestroyBattlerScreen()
-        {
-            Object.Destroy(BattlerScreen);
-        }
-
-        private async Task<GameObject> CreateScreenAsync(string path)
+        private async Task<UIElement> CreateScreenAsync(string path)
         {
             var loadingScreenPrefab = await _assetsAddressableService.GetAssetAsync<GameObject>(path);
             var screen = _container.InstantiatePrefab(loadingScreenPrefab);
-            return screen;
+            if (screen.TryGetComponent(out UIElement uiElement))
+                return uiElement;
+            return null;
         }
     }
 }

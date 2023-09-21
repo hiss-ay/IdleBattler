@@ -1,21 +1,11 @@
 ﻿using System.Threading.Tasks;
-using UnityEngine;
+using Game.Sources.UI.Base;
 
 namespace Game.Sources.Infrastructure.Factories.UIFactory
 {
     public interface IUIFactory
     {
-        public GameObject MainMenuScreen { get; }
-        public GameObject CardCollectionScreen { get; }
-        public GameObject TeamBuilderScreen { get; }
-        public GameObject BattlerScreen { get; }
-        public Task<GameObject> CreateMainMenuScreen();
-        public void DestroyMainMenuScreen();
-        public Task<GameObject> CreateCardCollectionScreen();
-        public void DestroyCardCollectionScreen();
-        public Task<GameObject> CreateTeamBuilderScreen();
-        public void DestroyTeamBuilderScreen();
-        public Task<GameObject> CreateBattlerScreen();
-        public void DestroyBattlerScreen();
+        public Task<UIElement> ShowScreen<T>(UIElementType type, T context);
+        public void DestroyScreen(UIElementType type);
     }
 }
