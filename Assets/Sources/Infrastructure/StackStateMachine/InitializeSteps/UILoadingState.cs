@@ -6,9 +6,9 @@ using Game.Sources.UI.MainMenuScreen;
 
 namespace Game.Sources.Infrastructure.StackStateMachine.InitializeSteps
 {
-    public class MainMenuState : InstantState
+    public class UILoadingState : InstantState
     {
-        public MainMenuState(IUIService uiFactory, 
+        public UILoadingState(IUIService uiFactory, 
             IPersistentProgressService persistentProgressService)
         {
             _uiFactory = uiFactory;
@@ -42,7 +42,5 @@ namespace Game.Sources.Infrastructure.StackStateMachine.InitializeSteps
             
             _mainMenuScreen.Hide();
         }
-
-        
     }
 }

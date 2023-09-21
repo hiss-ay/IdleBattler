@@ -30,8 +30,10 @@ namespace Game.Sources.UI.MainMenuScreen.MonsterPreview
         {
             while (true)
             {
-                var monsterCard = _monstersCollectionService.MonsterCards.First(x => x.IsUnlocked);
-                var monsterInstance = _abstractFactory.CreateInstance(monsterCard.Prefab, Vector3.zero);
+                var monsterCards = _monstersCollectionService.MonsterCards.Where(x => x.Evaluated).ToArray();
+                var randomIndex = Random.Range(0, monsterCards.Length);
+                var randomMonsterCard = monsterCards[randomIndex];
+                var monsterInstance = _abstractFactory.CreateInstance(randomMonsterCard.Prefab, Vector3.zero);
                 
                 yield return new WaitForSeconds(timer);
                 

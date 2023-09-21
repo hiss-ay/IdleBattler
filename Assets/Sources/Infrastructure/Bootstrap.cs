@@ -1,6 +1,5 @@
 ﻿using Game.Sources.Data.AssetsAddressable;
 using Game.Sources.Data.Settings;
-using Game.Sources.Infrastructure.Factories.AbstractFactory;
 using Game.Sources.Infrastructure.StackStateMachine.Base;
 using Game.Sources.Infrastructure.StackStateMachine.InitializeSteps;
 using Game.Sources.Services.AssetsAddressableService;
@@ -18,7 +17,6 @@ namespace Game.Sources.Infrastructure
             PlayerInitializationSettings playerInitializationSettings,
             IMonstersCollectionService monstersCollectionService,
             IUIService uiFactory,
-            IAbstractFactory abstractFactory,
             IPersistentProgressService persistentProgressService,
             ISaveLoadService saveLoadService)
         {
@@ -28,7 +26,7 @@ namespace Game.Sources.Infrastructure
                 new ActionState(saveLoadService.SaveProgress),
                 new SceneLoadingAsyncState(AssetsAddressableConstants.MAIN_MENU_LEVEL_NAME, assetsAddressableService),
                 new SceneLoadingAsyncState(AssetsAddressableConstants.MONSTER_PREVIEW_LEVEL_NAME, assetsAddressableService, LoadSceneMode.Additive),
-                new MainMenuState(uiFactory, persistentProgressService)
+                new UILoadingState(uiFactory, persistentProgressService)
             );
         }
     }

@@ -313,9 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab87516415d6a4d459326789e9ed910a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerNumber: 6
   timer: 6
-  parent: {fileID: 858900920}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

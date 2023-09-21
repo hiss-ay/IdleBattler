@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158165d10e9d4b878c8c190eff3bb986, type: 3}
   m_Name: AnchoredPositionTransitionShowSettings_Right
   m_EditorClassIdentifier: 
-  ease: 34
+  ease: 18
   duration: 0.2
   delay: 0
   from: {x: 3000, y: 0}

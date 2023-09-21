@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Game.Sources.UI.Base.Handlers.ShowHideHandlers
+namespace Game.Sources.UI.Base.ShowHideHandlers
 {
     public class CanvasShowHideHandler : MonoBehaviour, IShowHandler, IHideHandler
     {

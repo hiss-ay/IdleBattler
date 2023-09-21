@@ -1,5 +1,4 @@
-﻿using Game.Sources.UI.Base.Handlers;
-using Game.Sources.UI.Base.Handlers.ShowHideHandlers;
+﻿using Game.Sources.UI.Base.ShowHideHandlers;
 using UnityEngine;
 
 namespace Game.Sources.UI.Base

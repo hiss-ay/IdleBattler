@@ -10,33 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 916059553be4c5b4590e415f9fd5c0f9, type: 3}
-  m_Name: 1. Egglet-Shady-Shadow
+  m_Name: 2. Spidy-Webb-Arachnid
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
   evolutionSettings:
   - spellSettings: {fileID: 11400000, guid: 66d5016069ae1b043b595a49dae94037, type: 2}
     monsterEvolutionSkin:
-      name: Egglet
+      name: Spidy
       icon: {fileID: 21300000, guid: 95a372ffeea2a4ae0baa518551b8566b, type: 3}
     prefab: {fileID: 3295690693072712635, guid: 9d75c582a54631c4e87dcc987399513d, type: 3}
     cardsRequired: 0
   - spellSettings: {fileID: 11400000, guid: 66d5016069ae1b043b595a49dae94037, type: 2}
     monsterEvolutionSkin:
-      name: Egglet
-      icon: {fileID: 21300000, guid: 2995610739c9b51409a7cc6f2dc8ebed, type: 3}
-    prefab: {fileID: 7610133508913661007, guid: 97d9ccd8773238242b6f84599113e69d, type: 3}
+      name: Spidy
+      icon: {fileID: 21300000, guid: 435f95f29c793e44689bbe3f7e4cc761, type: 3}
+    prefab: {fileID: 8672787908860700878, guid: bf5449bbcac72834ca743cec98343453, type: 3}
     cardsRequired: 3
   - spellSettings: {fileID: 11400000, guid: 66d5016069ae1b043b595a49dae94037, type: 2}
     monsterEvolutionSkin:
-      name: Shade
-      icon: {fileID: 21300000, guid: fb237368064fcbf4997c6e1eafdae493, type: 3}
-    prefab: {fileID: 3118294153675456976, guid: 8af47c92f43ccab4da5e4bcebc3f363e, type: 3}
+      name: Webb
+      icon: {fileID: 21300000, guid: f4fe6675522e1cb4c8d803f58cad3572, type: 3}
+    prefab: {fileID: 8754938060832370620, guid: 6dbc16e4fba9f754bbbfa742ac74b0c9, type: 3}
     cardsRequired: 5
   - spellSettings: {fileID: 11400000, guid: 66d5016069ae1b043b595a49dae94037, type: 2}
     monsterEvolutionSkin:
-      name: Shadow
-      icon: {fileID: 21300000, guid: 7554a4c2c7dc7c34ca664830a1f6ae93, type: 3}
-    prefab: {fileID: 4295393359093558748, guid: c08e11ce237d0a34eab058ff3752293c, type: 3}
+      name: Arachnid
+      icon: {fileID: 21300000, guid: 6e3c1835403cf0b4c924d4a5b54972a6, type: 3}
+    prefab: {fileID: 1341914136520030688, guid: d77ff1f657d33da49b36e105a0064d0a, type: 3}
     cardsRequired: 7
   monsterStats:
     health:

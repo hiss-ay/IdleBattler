@@ -9,7 +9,8 @@ namespace Game.Sources.Data.Settings.MonsterSettings
         [SerializeField] private SpellSettings spellSettings;
         [SerializeField] private MonsterEvolutionSkin monsterEvolutionSkin;
         [SerializeField] private GameObject prefab;
-
+        [SerializeField] private int cardsRequired;
+        
         public Sprite SpellIcon => spellSettings.Icon;
         public string SpellDescription => spellSettings.Description;
         
@@ -17,5 +18,7 @@ namespace Game.Sources.Data.Settings.MonsterSettings
         public string MonsterName => monsterEvolutionSkin.Name;
 
         public GameObject Prefab => prefab;
+
+        public int CardRequired => cardsRequired;
     }
 }

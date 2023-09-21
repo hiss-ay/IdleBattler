@@ -1,4 +1,4 @@
-namespace Game.Sources.UI.Base.Handlers.ShowHideHandlers
+namespace Game.Sources.UI.Base.ShowHideHandlers
 {
     public interface IShowHandler
     {

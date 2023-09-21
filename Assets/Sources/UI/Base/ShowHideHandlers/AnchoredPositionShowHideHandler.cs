@@ -1,7 +1,7 @@
 using Game.Sources.UI.Base.Transitions;
 using UnityEngine;
 
-namespace Game.Sources.UI.Base.Handlers.ShowHideHandlers
+namespace Game.Sources.UI.Base.ShowHideHandlers
 {
     public class AnchoredPositionShowHideHandler : MonoBehaviour, IShowHandler, IHideHandler
     {
