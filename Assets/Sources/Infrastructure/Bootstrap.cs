@@ -1,13 +1,13 @@
 ﻿using Game.Sources.Data.AssetsAddressable;
 using Game.Sources.Data.Settings;
 using Game.Sources.Infrastructure.Factories.AbstractFactory;
-using Game.Sources.Infrastructure.Factories.UIFactory;
 using Game.Sources.Infrastructure.StackStateMachine.Base;
 using Game.Sources.Infrastructure.StackStateMachine.InitializeSteps;
 using Game.Sources.Services.AssetsAddressableService;
 using Game.Sources.Services.MonstersCollectionService;
 using Game.Sources.Services.PersistentProgressService;
 using Game.Sources.Services.SaveLoadService;
+using Game.Sources.Services.UIService;
 using UnityEngine.SceneManagement;
 
 namespace Game.Sources.Infrastructure
@@ -17,7 +17,7 @@ namespace Game.Sources.Infrastructure
         public Bootstrap(IAssetsAddressableService assetsAddressableService,
             PlayerInitializationSettings playerInitializationSettings,
             IMonstersCollectionService monstersCollectionService,
-            IUIFactory uiFactory,
+            IUIService uiFactory,
             IAbstractFactory abstractFactory,
             IPersistentProgressService persistentProgressService,
             ISaveLoadService saveLoadService)

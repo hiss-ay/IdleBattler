@@ -1,4 +1,5 @@
 ﻿using Game.Sources.UI.Base.Handlers;
+using Game.Sources.UI.Base.Handlers.ShowHideHandlers;
 using UnityEngine;
 
 namespace Game.Sources.UI.Base
@@ -23,7 +24,7 @@ namespace Game.Sources.UI.Base
             {
                 for (int i = 0; i < ShowHandlers.Length; i++)
                 {
-                    ShowHandlers[i].OnShow(this);
+                    ShowHandlers[i].OnShow();
                 }
                 
                 _isShowing = true;
@@ -38,7 +39,7 @@ namespace Game.Sources.UI.Base
             {
                 for (int i = 0; i < ShowHandlers.Length; i++)
                 {
-                    HideHandlers[i].OnHide(this);
+                    HideHandlers[i].OnHide();
                 }
                 
                 _isShowing = false;

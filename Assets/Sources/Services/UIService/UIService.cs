@@ -7,11 +7,11 @@ using Game.Sources.UI.Extensions;
 using UnityEngine;
 using Zenject;
 
-namespace Game.Sources.Infrastructure.Factories.UIFactory
+namespace Game.Sources.Services.UIService
 {
-    public class UIFactory : IUIFactory
+    public class UIService : IUIService
     {
-        public UIFactory(DiContainer container, IAssetsAddressableService assetsAddressableService)
+        public UIService(DiContainer container, IAssetsAddressableService assetsAddressableService)
         {
             _container = container;
             _assetsAddressableService = assetsAddressableService;
@@ -21,30 +21,26 @@ namespace Game.Sources.Infrastructure.Factories.UIFactory
         private readonly DiContainer _container;
 
         private readonly List<UIElement> _activeElements = new();
+        private UIElement _currentElement;
+        
+        public UIElementType DefaultScreenType => UIElementType.MainMenuScreen;
 
-        public async Task<UIElement> ShowScreen<T>(UIElementType type, T context)
+        public async Task<UIElement> ShowScreen(UIElementType type, object context)
         {
-            var screen = _activeElements.FirstOrDefault(x => x.UIElementType == type);
+            if (_currentElement != null && _currentElement.UIElementType != DefaultScreenType)
+                _currentElement.Hide();
             
-            if (screen == null)
+            _currentElement = _activeElements.FirstOrDefault(x => x.UIElementType == type);
+            
+            if (_currentElement == null)
             {
-                screen = await CreateScreenAsync(type.ToAddressableConstant());
-                _activeElements.Add(screen);
+                _currentElement = await CreateScreenAsync(type.ToAddressableConstant());
+                _activeElements.Add(_currentElement);
             }
             
-            screen.Show(context);
+            _currentElement.Show(context);
 
-            return screen;
-        }
-
-        public void DestroyScreen(UIElementType type)
-        {
-            var screen = _activeElements.FirstOrDefault(x => x.UIElementType == type);
-            if (screen != null)
-            {
-                _activeElements.Remove(screen);
-                Object.Destroy(screen);
-            }
+            return _currentElement;
         }
 
         private async Task<UIElement> CreateScreenAsync(string path)

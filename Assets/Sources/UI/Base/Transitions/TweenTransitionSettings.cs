@@ -22,6 +22,6 @@ namespace Game.Sources.UI.Base.Transitions
         }
 
         protected abstract Tween BaseTween(T component);
-        public abstract void OnBeforePlay(T component);
+        public abstract void OnPlay(T component);
     }
 }

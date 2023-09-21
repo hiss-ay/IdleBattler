@@ -1,7 +1,7 @@
 using Game.Sources.UI.Base.Transitions;
 using UnityEngine;
 
-namespace Game.Sources.UI.Base.Handlers
+namespace Game.Sources.UI.Base.Handlers.ShowHideHandlers
 {
     public class AnchoredPositionShowHideHandler : MonoBehaviour, IShowHandler, IHideHandler
     {
@@ -9,7 +9,7 @@ namespace Game.Sources.UI.Base.Handlers
         [SerializeField] private AnchoredPositionTransition[] showTransitions;
         [SerializeField] private AnchoredPositionTransition[] hideTransitions;
         
-        public void OnShow(UIElement element)
+        public void OnShow()
         {
             for (int i = 0; i < hideTransitions.Length; i++)
             {
@@ -22,7 +22,7 @@ namespace Game.Sources.UI.Base.Handlers
             }
         }
 
-        public void OnHide(UIElement element)
+        public void OnHide()
         {
             for (int i = 0; i < showTransitions.Length; i++)
             {

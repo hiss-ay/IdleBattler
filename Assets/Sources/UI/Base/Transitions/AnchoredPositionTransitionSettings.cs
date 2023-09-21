@@ -14,7 +14,7 @@ namespace Game.Sources.UI.Base.Transitions
             return component.DOAnchorPos(to, duration);
         }
 
-        public override void OnBeforePlay(RectTransform component)
+        public override void OnPlay(RectTransform component)
         {
             component.anchoredPosition = from;
         }

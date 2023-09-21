@@ -9,7 +9,7 @@ namespace Game.Sources.UI.Base.Transitions
         public void Restart(T component)
         {
             var settings = GetSettings();
-            settings.OnBeforePlay(component);
+            settings.OnPlay(component);
             
             _tween?.Kill();
             _tween = settings.CreateNewTween(component);

@@ -146,9 +146,8 @@ GameObject:
   - component: {fileID: 9174279800997122030}
   - component: {fileID: 9174279800997122031}
   - component: {fileID: 8585034787764361327}
-  - component: {fileID: 8665617037201161543}
-  - component: {fileID: 3258421317991771012}
-  - component: {fileID: 4273055708522443263}
+  - component: {fileID: 2552095729211421167}
+  - component: {fileID: 4363672839466732679}
   m_Layer: 5
   m_Name: BaseLobbyButton
   m_TagString: Untagged
@@ -228,8 +227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  button: {fileID: 8665617037201161543}
---- !u!114 &8665617037201161543
+  button: {fileID: 2552095729211421167}
+--- !u!114 &2552095729211421167
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,7 +237,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9174279800997122017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 1714ffe7220f430c8da79d1b79c38c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -248,7 +247,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -273,30 +272,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!223 &3258421317991771012
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9174279800997122017}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 1
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_TargetDisplay: 0
---- !u!114 &4273055708522443263
+--- !u!114 &4363672839466732679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,14 +281,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9174279800997122017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: e3048c5ab308486393aa283e8e591f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  target: {fileID: 9174279800997122016}
+  pressedScale: {x: 0.95, y: 0.95}
+  transitionDuration: 0.1
+  normalScale: {x: 1, y: 1}
 --- !u!1 &9174279801879310447
 GameObject:
   m_ObjectHideFlags: 0
