@@ -25,8 +25,8 @@ namespace Game.Sources.Data.Settings.MonsterSettings
         
         public EvolutionSettings GetEvolutionData(int level)
         {
-            var evolutionIndex = level % 10 + 1;
-            return evolutionSettings[Mathf.Clamp(evolutionIndex, 0, evolutionSettings.Length - 1)];
+            var evolutionIndex = level > 0 ? level / 10 + 1 : 0;
+            return evolutionSettings[Mathf.Clamp(evolutionIndex, 0, evolutionSettings.Length)];
         }
     }
 }

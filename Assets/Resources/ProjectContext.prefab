@@ -199,4 +199,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInitializationSettings: {fileID: 11400000, guid: 4f32e27b1ad4f2a489863da066284ecb, type: 2}
-  monstersCollection: {fileID: 11400000, guid: b02aa74cb91cc0e4a9623e959658f860, type: 2}
+  monstersCollectionSettings: {fileID: 11400000, guid: b02aa74cb91cc0e4a9623e959658f860, type: 2}

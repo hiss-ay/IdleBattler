@@ -14,8 +14,8 @@ namespace Game.Sources.Infrastructure.Factories.AbstractFactory
         }
 
         private readonly DiContainer _container;
-        
-        public List<GameObject> Instances { get; private set; }
+
+        public List<GameObject> Instances { get; } = new();
         
         public GameObject CreateInstance(GameObject prefab, Vector3 spawnPoint)
         {

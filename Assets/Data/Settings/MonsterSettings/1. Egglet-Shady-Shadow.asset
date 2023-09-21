@@ -15,39 +15,39 @@ MonoBehaviour:
   id: 0
   evolutionSettings:
   - spellSettings: {fileID: 11400000, guid: 66d5016069ae1b043b595a49dae94037, type: 2}
-    monsterSkin:
+    monsterEvolutionSkin:
+      name: Egglet
+      icon: {fileID: 21300000, guid: 95a372ffeea2a4ae0baa518551b8566b, type: 3}
+    prefab: {fileID: 3295690693072712635, guid: 9d75c582a54631c4e87dcc987399513d, type: 3}
+  - spellSettings: {fileID: 11400000, guid: 66d5016069ae1b043b595a49dae94037, type: 2}
+    monsterEvolutionSkin:
       name: Egglet
       icon: {fileID: 21300000, guid: 2995610739c9b51409a7cc6f2dc8ebed, type: 3}
-    prefab: {fileID: 0}
+    prefab: {fileID: 7610133508913661007, guid: 97d9ccd8773238242b6f84599113e69d, type: 3}
   - spellSettings: {fileID: 11400000, guid: 66d5016069ae1b043b595a49dae94037, type: 2}
-    monsterSkin:
-      name: Egglet
-      icon: {fileID: 21300000, guid: 2995610739c9b51409a7cc6f2dc8ebed, type: 3}
-    prefab: {fileID: 0}
-  - spellSettings: {fileID: 11400000, guid: 66d5016069ae1b043b595a49dae94037, type: 2}
-    monsterSkin:
-      name: Shady
+    monsterEvolutionSkin:
+      name: Shade
       icon: {fileID: 21300000, guid: fb237368064fcbf4997c6e1eafdae493, type: 3}
-    prefab: {fileID: 0}
+    prefab: {fileID: 3118294153675456976, guid: 8af47c92f43ccab4da5e4bcebc3f363e, type: 3}
   - spellSettings: {fileID: 11400000, guid: 66d5016069ae1b043b595a49dae94037, type: 2}
-    monsterSkin:
+    monsterEvolutionSkin:
       name: Shadow
       icon: {fileID: 21300000, guid: 7554a4c2c7dc7c34ca664830a1f6ae93, type: 3}
-    prefab: {fileID: 0}
-  stats:
+    prefab: {fileID: 4295393359093558748, guid: c08e11ce237d0a34eab058ff3752293c, type: 3}
+  monsterStats:
     health:
-      base: 210
-      baseModifier: 160
-      firstEvolutionModifier: 2000
+      base: 160
+      baseModifier: 100
+      firstEvolutionModifier: 500
       secondEvolutionModifier: 5000
     damage:
-      base: 36
-      baseModifier: 15
-      firstEvolutionModifier: 150
-      secondEvolutionModifier: 500
-    cooldown: 0.95
-    moveSpeed: 1.95
-  attackSettings: {fileID: 11400000, guid: b373fb387a759b84bbe5a417f0fd82bf, type: 2}
+      base: 15
+      baseModifier: 10
+      firstEvolutionModifier: 200
+      secondEvolutionModifier: 1000
+    cooldown: 1.5
+    moveSpeed: 1.2
+  attackTypeSettings: {fileID: 11400000, guid: b373fb387a759b84bbe5a417f0fd82bf, type: 2}
   levelUpgradeCost:
     priceCoef: 1.05
     priceMod: 100

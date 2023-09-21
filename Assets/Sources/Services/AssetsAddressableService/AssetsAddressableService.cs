@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.SceneManagement;
 
 namespace Game.Sources.Services.AssetsAddressableService
 {
@@ -15,9 +16,9 @@ namespace Game.Sources.Services.AssetsAddressableService
             return asyncOperationHandle.Result;
         }
 
-        public async Task LoadSceneAsync(string sceneName)
+        public async Task LoadSceneAsync(string sceneName, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
-            var asyncOperationHandle = Addressables.LoadSceneAsync(sceneName);
+            var asyncOperationHandle = Addressables.LoadSceneAsync(sceneName, loadSceneMode);
             await asyncOperationHandle.Task;
         }
     }
