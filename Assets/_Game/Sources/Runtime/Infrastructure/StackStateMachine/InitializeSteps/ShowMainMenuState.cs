@@ -6,9 +6,9 @@ using Runtime._Game.Sources.Runtime.UI.MainMenuScreen;
 
 namespace Runtime._Game.Sources.Runtime.Infrastructure.StackStateMachine.InitializeSteps
 {
-    public class UILoadingState : InstantState
+    public class ShowMainMenuState : InstantState
     {
-        public UILoadingState(IUIService uiFactory, 
+        public ShowMainMenuState(IUIService uiFactory, 
             IPersistentProgressService persistentProgressService)
         {
             _uiFactory = uiFactory;

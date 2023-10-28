@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4322022565717305089}
-  - component: {fileID: 5267599536150296889}
   - component: {fileID: 4515819843552090227}
+  - component: {fileID: 5267599536150296889}
   - component: {fileID: 599105705110798923}
   - component: {fileID: 1228011382766669676}
   m_Layer: 0
@@ -36,6 +36,18 @@ Transform:
   - {fileID: 9123836525343995207}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &4515819843552090227
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985564475683937706}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &5267599536150296889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,18 +65,6 @@ MonoBehaviour:
   - settings: {fileID: 11400000, guid: b37c96c66f3fbf74796d9b0273766d90, type: 2}
   hideTransitions:
   - settings: {fileID: 11400000, guid: 0122a1b8fa3a9e74883153cd8ebe7969, type: 2}
---- !u!225 &4515819843552090227
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985564475683937706}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!114 &599105705110798923
 MonoBehaviour:
   m_ObjectHideFlags: 0

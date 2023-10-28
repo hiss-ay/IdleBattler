@@ -1,5 +1,4 @@
-﻿using Game.Sources.Infrastructure;
-using Zenject;
+﻿using Zenject;
 
 namespace Runtime._Game.Sources.Runtime.Infrastructure.Installers
 {

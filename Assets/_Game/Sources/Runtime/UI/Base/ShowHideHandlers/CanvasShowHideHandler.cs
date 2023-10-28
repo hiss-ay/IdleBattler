@@ -12,9 +12,9 @@ namespace Runtime._Game.Sources.Runtime.UI.Base.ShowHideHandlers
         
         public void OnShow()
         {
+            StopCoroutine(HideDelay());
             canvas.enabled = true;
             raycaster.enabled = true;
-            StopAllCoroutines();
         }
 
         public void OnHide()

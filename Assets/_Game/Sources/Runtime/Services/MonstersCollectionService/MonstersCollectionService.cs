@@ -25,7 +25,7 @@ namespace Runtime._Game.Sources.Runtime.Services.MonstersCollectionService
             
             foreach (var monsterSettings in _monstersCollectionSettings.MonsterSettings)
             {
-                var monsterData = _persistentProgressService.GetOrCreateMonsterDataByID(monsterSettings.ID);
+                var monsterData = _persistentProgressService.GetMonsterData(monsterSettings.ID);
                 var card = new MonsterCard(monsterSettings, monsterData);
                 MonsterCards.Add(card);
             }

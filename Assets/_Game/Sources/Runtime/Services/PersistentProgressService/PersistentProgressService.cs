@@ -30,7 +30,7 @@ namespace Runtime._Game.Sources.Runtime.Services.PersistentProgressService
             OnLevelUp?.Invoke(PlayerProgressData.level);
         }
         
-        public MonsterData GetOrCreateMonsterDataByID(int id)
+        public MonsterData GetMonsterData(int id)
         {
             var monsterData = PlayerProgressData.monstersData.FirstOrDefault(x => x.id == id);
             

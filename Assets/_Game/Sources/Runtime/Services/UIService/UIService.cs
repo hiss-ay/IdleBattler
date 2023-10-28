@@ -47,8 +47,10 @@ namespace Runtime._Game.Sources.Runtime.Services.UIService
         {
             var loadingScreenPrefab = await _assetsAddressableService.GetAssetAsync<GameObject>(path);
             var screen = _container.InstantiatePrefab(loadingScreenPrefab);
+            
             if (screen.TryGetComponent(out UIElement uiElement))
                 return uiElement;
+            
             return null;
         }
     }
